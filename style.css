@@ -1,10 +1,18 @@
- @media (prefers-color-scheme: dark){
+/* TODO: clean me up! */
+
+@media (prefers-color-scheme: dark){
      body {color:#fff;background:#000}
 a:link {color:#cdf}
 a:hover, a:visited:hover {color:#def}
 a:visited {color:#dcf}
+* (-ms-high-contrast: black-on-white){background-color: #000;
+   color: white;
+   color-scheme: dark;
+   prefer-color-scheme: dark}
  }
  body{
+     background-color: black;
+     color: white;
      margin:1em auto;
      max-width:40em;
      padding:0 .62em;
@@ -23,3 +31,11 @@ a:visited {color:#dcf}
          max-width:none
      }
  }
+pre {
+white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+white-space: -pre-wrap; /* Opera 4 - 6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+word-wrap: break-word; /* IE 5.5+ */
+}
+
