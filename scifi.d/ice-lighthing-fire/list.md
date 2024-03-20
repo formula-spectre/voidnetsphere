@@ -1,0 +1,16 @@
+- Of Ice, Lightning and Fire
+  - the Shadow cycle
+    - Shadowbreakers
+    - Shadowbreakers: black sun
+    - Shadowbreakers: the dark side of the moon
+    - Shadowbreakers: the enemy within the enemy
+    - Shadowbreakers: Rising Sun
+  - The War of the Gods Cycle:
+    - The First War
+      - Deus Infinity: Gods at war
+      - Deus Infinity: Battle Beyond Times
+      - Deus Infinity: Celestial Warfare
+    - The Second War
+      - Deus Infinity: The divine Matrix
+      - Deus Infinity: Quantum Divination
+      - Deus infinity: artificial blood(shed) 
