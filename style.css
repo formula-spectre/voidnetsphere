@@ -39,3 +39,12 @@ white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://w
 word-wrap: break-word; /* IE 5.5+ */
 }
 
+nav {
+    padding-left: 4ch;
+}
+section::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: gray;
+}
