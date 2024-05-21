@@ -21,7 +21,7 @@ a:visited {color:#dcf}
  h2,h3 {
      line-height:1.2
  }
- @font-face {font-family LispM; src: url('./media/lispm-monospace.otf');}
+@font-face {font-family LispM; src: url('./media/lispm-monospace.otf');}
  h1 {
      line-height:1.2
      font-family: LispM

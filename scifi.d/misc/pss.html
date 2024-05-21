@@ -6,7 +6,7 @@
         <title>explaining PSS</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/voidnetsphere/style.css">
+        <link rel="stylesheet" href="/style.css">
         <style>
          @font-face { font-family: pss; src: url(./pss.ttf); }
          h3 {font-family: pss, sans-serif}
@@ -32,9 +32,12 @@ tr:nth-child(even) {
 
     <body>
 <h1>warning: this page make uses of Javascript. it's not for tracking you. it's just for processing strings.</h1>
+
 <h2>the javascript used here is Libre and Open Source, you can inspect the page as you wish </h2>
+<h2><a href="https://gock.mom">Thanks to Nao for providing the js code and helping my lazy ass in implementing it, visit her site, she's cool! </a><h2>
+
 I want to explain something: alphabet <br>
-  
+
 <h3>This is pss script. </h3>
 <h3> Portable Symbol Set is the language used by the heavy industries. <br>
     It has been refined for biomechanical higher beings </h3>
@@ -102,36 +105,36 @@ below is a table that "translates" the symbols to the latin alphabet, though it'
         <th><h3>Z</h3></th>
     </tr>
 </table>
+<script>
+function loadPss(){
+document.getElementById("pssinput").oninput = (e) => {
+    let s = e.target.value.replace(/[^bcdfghjklmnpqrstvwxyz]/g, "");
+    const map = new Map([
+        [ "b", "p" ],
+        [ "s", "tz" ],
+        [ "d", "t" ],
+        [ "g", "k" ],
+        [ "v", "f" ],
+        [ "j", "sh" ],
+        [ "th", "Θ" ],
+        [ "n", "" ],
+    ]);
+
+    for (const [m, n] of map.entries())
+        s = s.replaceAll(m, n);
+
+    document.getElementById("pssout").textContent = [...new Set([...s])].join("").toUpperCase();
+}
+     };
+</script>
+
 
     <label for="input">Enter something to translate it into pss:</label>
     <input type="text" id="pssinput">
-    <button onclick="processInput()">Process</button>
+    <button onclick="loadPss()">Process</button>
 
     <div id="humanout"></div>
     <h3><div id="pssout"></div></h3>
-
-
-
-    <script>
-        function removeDuplicates(input) {
-            const charMap = new Map();
-            let result = "";
-            for (const char of input) {
-                if (char !== " " && !charMap.has(char)) {
-                    charMap.set(char, true);
-                    result += char;
-                }
-            }
-            return result;
-        }
-
-        function processInput() {
-            const inputString = document.getElementById("pssinput").value;
-            const resultString = removeDuplicates(inputString);
-            document.getElementById("humanout").textContent = resultString;
-            document.getElementById("pssout").textContent = resultString;
-        }
-    </script>
 
 </body>
 </html>
