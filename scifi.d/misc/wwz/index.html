@@ -9,7 +9,12 @@
         <link rel="stylesheet" href="/style.css">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+        <style>
+         table, th, td {
+           border: 1px solid black;
+           padding: 10px;
+         }
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -97,23 +102,59 @@ basically the rules are a mutation of various ruleset that already exists, just 
   some units have other stats, but it usually depends from unit to unit. <br>
   The common soldier might Look like this: <br>
 <pre>
+
 Name: Common Italian soldier
-|---+---+----+----+---+---+---|
-| H | A | RS | MS | L | M | A |
-|---+---+----+----+---+---+---|
-| 2 | 0 |  2 |  5 | 3 | 6 | 2 |
-|---+---+----+----+---+---+---|
-equipment:
-|----------------+-------+-------+--------+---------+-------------+-----------|
-| weapon         | type  | range | damage | bullets | penetration | abilities |
-|----------------+-------+-------+--------+---------+-------------+-----------|
-| Carcano Mod 91 | Rifle |    16 |      1 |       6 |           1 | none      |
-|----------------+-------+-------+--------+---------+-------------+-----------|
+<table>
+  <tr>
+    <th>H</th>
+    <th>A</th>
+    <th>RS</th>
+    <th>MS</th>
+    <th>L</th>
+    <th>M</th>
+    <th>A</th>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>0</td>
+    <td>2</td>
+    <td>5</td>
+    <td>3</td>
+    <td>6</td>
+    <td>2</td>
+  </tr>
+</table>
+weapons:
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Range</th>
+    <th>Damage</th>
+    <th>Bullets</th>
+    <th>Penetration</th>
+    <th>Abilites</th>
+  </tr>
+  <tr>
+    <th>Carcano Mod. 91</th>
+    <th> Rifle</th>
+    <th> 16</th>
+    <th> 1</th>
+    <th> 6</th>
+    <th> 1</th>
+    <th> none</th>
+  </tr>
+</table>
+Equipment:
 - 6 rifle magazines (6 bullets per cartrige)
-|---------+------+--------+-
-| actions | move | reload |
-|---------+------+--------+-
-</pre>
+Actions:
+<table>
+  <tr>
+    <th>Move</th>
+    <th>Reload</th>
+    <th>Pray</th>
+  </tr>
+</table>
 as you can see it's quite basic; you have your unit, and you have a weapon. <br>
 to shoot with the rifle you roll off a d6 for Ranged Skill; if you score more than the number, you can shoot <br>
 let's break down the propeties of a weapon:
@@ -128,16 +169,31 @@ let's break down the propeties of a weapon:
 <ul>
 
 let's make another example with a more complex weapon:
-<pre>
-|-------------+--------+-------+--------+---------+-------------+-----------+
-| weapon      | type   | range | damage | bullets | penetration | abilities |
-|-------------+--------+-------+--------+---------+-------------+-----------+
-| ùberflammer | Flamer |     8 |      6 | x       |           5 | eldritch  |
-|-------------+--------+-------+--------+---------+-------------+-----------+
-Special Ability: if the holder has an object with [Germany] and [Old ones] keywords, it deals 8 damage and penetrates 7.
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Range</th>
+    <th>Damage</th>
+    <th>Bullets</th>
+    <th>Penetration</th>
+    <th>Abilites</th>
+  </tr>
+  <tr>
+    <th>überflammer</th>
+    <th>Flamer</th>
+    <th>8</th>
+    <th>6</th>
+    <th>x</th>
+    <th>5</th>
+    <th>eldritch</th>
+  </tr>
+</table>
+
+<li>Special Ability: if the holder has an object with [Germany] and [Old ones] keywords, it deals 8 damage and penetrates 7.</li>
+
 
 as you can see it has a keyword, then an ability special to itself: the Flamer weapon has always the [Hazardous] keyword, so it's excluded, but it has the [eldritch] keyword; which is better explained in a table.
-</pre>
 
     </body>
 </html>
